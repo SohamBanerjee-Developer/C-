@@ -1,5 +1,7 @@
 #include<iostream>
 using namespace std;
+// you can declare a integer array upto 10^6 inside main and 10^7 globally
+// for boolean inside main 10^7 and 10^8 globally and globally an unintialized array contains 0s instead of garbage values
 int main(){
     int arr[5];
     cin>>arr[0]>>arr[1]>>arr[2];

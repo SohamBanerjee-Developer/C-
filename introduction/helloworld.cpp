@@ -25,5 +25,14 @@ int main(){
    else{
     cout<<"invalid marks"
    }
+    int a =1;
+    int b=2;
+    int c;
+    c=a;
+    a=b;
+    b=c;
+    bool x = a==b;
+    cout<<a<<" "<<b<<endl;
+    cout<<x<<endl;
     return 0;
 }

@@ -4,6 +4,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 //map container stores key that are unique multimap allows duplicate keys both stores the keys in sorted order
+// map can have any datatypes as its key but unordered map has some limitation but both can store any data type as its value
 int main()
 {
     // Create a map of any datatype to any datatype
@@ -24,10 +25,10 @@ int main()
              << ", Value: " << it->second << endl;
         ++it;
     }
-    cout<<mp[2]<<endl;//it return the value whose key is 1 if the given key is present it points to the adddress of end() and returns 0
+    cout<<mp[2]<<endl;//it return the value whose key is 1 if the given key is not present it points to the adddress of end() and returns 0
     //there is also find() upper_bound() lower_boun() and all the other function of above containers
     auto a = mp.find(5);// it returns and iterator to key 5 if 5 is not present then it points to the end()
-    // cout<<*a.second;
+    cout<<a->second;
 
     return 0;
 }

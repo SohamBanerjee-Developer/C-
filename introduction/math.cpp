@@ -2,6 +2,7 @@
 #include<vector>
 #include<math.h>
 #include<algorithm>
+#include<map>
 using namespace std;
 void checkPrime(int n){
     int count = 0;
@@ -81,10 +82,61 @@ int HCF2(int n1, int n2){//eulicidan's algo
     if(n1==0) return n2;
     return n1;
 }
+void hashing(int n,int arr[], char q){
+   
+    int hash[13] ={0};// whatever can be the maximum sixe of array take that as size of hash 
+    for(int i=0; i<n; i++){
+        hash[arr[i]] += 1;
+    }
+    while(q--){
+        int number; 
+        cin>>number;
+        cout<<"the no of occurence of "<<number<<" in the given array is "<<hash[number]<<endl;
+    }
+}
+void hashing_character(string s, int q){
+    int hash[26] ={0};
+    for(int i =0 ; i<26; i++){
+        hash[s[i]-'a'] += 1;// a charater is typecasted to integer via its ASCII value
+    }
+    cout<<"enter your queries: "<<endl;
+    while(q--){
+        char query;
+        cin>>query;
+        cout<<"the no of occurence of "<<query<<" is: "<<hash[query - 'a'];
+    }
+
+}
+//storing and fetching data from map takes log(n) time for all the cases
+// unordered map takes O(1) for best and average cases and O(n) for worst cases
+// worst caseo(n) for unordered is collision/infinite chaining in hashing by division method/ linear chaining
+void hashing_map(int arr[], int n, char q){
+    map<int,int> hash;
+    for (int i =0; i<n; i++){
+        hash[arr[i]] ++;
+    }
+    while(q--){
+        int number;
+        cin>>number;
+        cout<<"the no of occurence of "<<number<<" in the given array is "<<hash[number]<<endl;
+    }
+}
 int main(){
     int n1 = 48;
     int n2 =24;
+    int n3, q;
+    string s = "absdjkjilmkmnhabd";
     // checkPrime2(n1);
-    cout<<"the hcf is: "<<HCF2(n1,n2)<<endl;
+    // cout<<"the hcf is: "<<HCF2(n1,n2)<<endl;
+    cin>>n3;
+    int arr[n3];
+    for(int i=0 ; i<n3; i++){
+        cin>>arr[i];
+    }
+    cout<<"enter the number of elemnts do you want to query: "<<endl;
+    cin>>q;
+    // hashing(n3,arr,q);
+    // hashing_character(s,q);
+    hashing_map(arr, n3, q);
     
 }

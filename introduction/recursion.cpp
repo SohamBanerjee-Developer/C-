@@ -1,6 +1,7 @@
 #include<iostream>
 
 using namespace std;
+//recursive function with no baes case will cause segmentation error/atack overflow
 void print(int i, int n){
     if(i>n) return;
     cout<<"soham"<<endl;
@@ -64,7 +65,7 @@ int main(){
     int arr[n];
     string s;
     // print(i,n);
-    // one_to_N(n);
+    one_to_N(n);
     // N_to_one(n,i);
     // paremetrized_multiplication(n,1);
     // cout<<multiplication(n)<<endl;
@@ -84,14 +85,14 @@ int main(){
     cout<<arr[i]<<" ";
     }*/
    
-   cin>>s;
+   /*cin>>s;
    cout<<s.size()<<endl;
    cout<<palindrome(s,0)<<endl;
    if(palindrome(s,0)){
     cout<<"the string is palindrome"<<endl;
    }else{
     cout<<"the string is not palindrome"<<endl;
-   }
+   }*/
 
     return 0;
 }

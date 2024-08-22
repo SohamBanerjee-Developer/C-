@@ -84,7 +84,7 @@ int HCF2(int n1, int n2){//eulicidan's algo
 }
 void hashing(int n,int arr[], char q){
    
-    int hash[13] ={0};// whatever can be the maximum sixe of array take that as size of hash 
+    int hash[13] ={0};// whatever can be the maximum siz e of array take that as size of hash 
     for(int i=0; i<n; i++){
         hash[arr[i]] += 1;
     }
